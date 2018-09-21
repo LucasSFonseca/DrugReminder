@@ -57,12 +57,8 @@ public class Date {
 			this.year = Integer.parseInt(split[2]);
 		}
 		
-		if(this.validateYear()) {
-			if (this.validateMonth()) {
-				if(this.validateDay()) {
-					return true;
-				}
-			}
+		if(this.validateYear() && this.validateMonth() && this.validateDay()) {
+				return true;
 		}
 		
 		return false;
@@ -101,7 +97,7 @@ public class Date {
 	}
 
 	private boolean validateMonth() {
-		if (this.month > 0 && this.month <= 13) {
+		if (this.month > 0 && this.month < 13) {
 			return true;
 		}
 		throw new IllegalArgumentException();
@@ -216,20 +212,20 @@ public class Date {
 		}
 		else if(this.month == 4 || this.month == 6 || this.month == 9 
 				|| this.month == 11) {
-			if(this.day > 31) {
+			if(this.day > 30) {
 				this.day -= 30;
 				this.month += 1;
 			}
 		}
 		else {
 			if(this.isLeapYear) {
-				if(this.day > 31) {
+				if(this.day > 29) {
 					this.day -= 29;
 					this.month += 1;
 				}
 			}
 			else {
-				if(this.day > 31) {
+				if(this.day > 28) {
 					this.day -= 28;
 					this.month += 1;
 				}
