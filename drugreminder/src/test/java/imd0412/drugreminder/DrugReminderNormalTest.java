@@ -26,6 +26,13 @@ public class DrugReminderNormalTest {
 			{"28/02/2200 18:00", Frequency.TWELVE_HOURS, 30, 60},
 			{"30/04/2018 18:00", Frequency.SIX_HOURS, 10, 40},
 			{"31/12/2019 23:45", Frequency.TWENTYFOUR_HOURS, 18, 18},
+			{"31/5/2019 23:45", Frequency.TWENTYFOUR_HOURS, 18, 18},
+			{"31/10/2019 23:45", Frequency.TWENTYFOUR_HOURS, 18, 18},
+			{"31/8/2019 23:45", Frequency.TWENTYFOUR_HOURS, 18, 18},
+			{"31/7/2019 23:45", Frequency.TWENTYFOUR_HOURS, 18, 18},
+			{"12/6/2019 23:45", Frequency.TWENTYFOUR_HOURS, 18, 18},
+			{"12/11/2019 23:45", Frequency.TWENTYFOUR_HOURS, 18, 18},
+
 			
 	});
 	}

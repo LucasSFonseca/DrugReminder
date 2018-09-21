@@ -30,7 +30,14 @@ public class DrugReminderExceptionTest {
 			{"20/02/202018:00", Frequency.TWELVE_HOURS, 5, IllegalArgumentException.class},
 			{"20/02/2020 1800", Frequency.TWELVE_HOURS, 5, IllegalArgumentException.class},
 			{"20/13/2020 18:00", Frequency.TWELVE_HOURS, 5, IllegalArgumentException.class},
-						
+			{"00/10/2020 18:00", Frequency.TWELVE_HOURS, 5, IllegalArgumentException.class},
+			{"00/09/2020 18:00", Frequency.TWELVE_HOURS, 5, IllegalArgumentException.class},
+			{"00/02/2020 18:00", Frequency.TWELVE_HOURS, 5, IllegalArgumentException.class},
+			{"00/02/2019 18:00", Frequency.TWELVE_HOURS, 5, IllegalArgumentException.class},
+			{"10/00/2019 18:00", Frequency.TWELVE_HOURS, 5, IllegalArgumentException.class},
+			{"10/02/2019 -10:00", Frequency.TWELVE_HOURS, 5, IllegalArgumentException.class},
+			{"10/02/2019 18:-10", Frequency.TWELVE_HOURS, 5, IllegalArgumentException.class},
+
 				});
 	}
 	
